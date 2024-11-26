@@ -2,16 +2,13 @@
   box-sizing: border-box;
   margin: 3px;
   padding: 3px;
-
 }
-.big-div{
+.big-div {
   min-width: 90%;
-
-
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: white;
   color: #0467b2;
   display: flex;
@@ -21,7 +18,6 @@ body {
   margin: 0;
 }
 
-
 .app-container {
   border-radius: 3px;
   display: flex;
@@ -29,27 +25,24 @@ body {
   min-height: 100vh;
   width: 100%;
   max-width: 800px;
-  background-color: #F3F5F6;
+  background-color: #f3f5f6;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
 }
 
-.link-go-back{
+.link-go-back {
   color: #1c68a2;
-  
 }
 
-.navlink{
+.navlink {
   display: flex;
   justify-content: space-around;
-  
 }
-.login_register{
+.login_register {
   display: flex;
   align-self: flex-end;
   justify-content: space-between;
-
 }
 
 .login_register button {
@@ -57,14 +50,12 @@ body {
   margin-bottom: 10px;
 }
 
-
-
 header {
   border-radius: 6px;
-  background-color: #4C7797;
+  background-color: #4c7797;
   display: flex;
   flex-direction: column;
-  color: white;  
+  color: white;
   width: 99%;
   padding: 20px;
   text-align: center;
@@ -83,11 +74,9 @@ main {
   padding: 20px;
   overflow-y: auto;
   background-color: #F2F2DF(171 88% 4%);
-
 }
 
 .card-list {
-  
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -98,36 +87,35 @@ main {
 }
 
 .card {
-  background-color: #FBBD1B;
+  background-color: var(--myColor);
   border-radius: 8px;
   padding: 20px;
   width: 280px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
-.nav{
+.nav {
   font-size: 27px;
   color: #2b2006;
 }
 
 .card h3 {
-
   margin-bottom: 10px;
 
   font-size: 1.2em;
-  color: #63310C;
+  color: var(--brown);
   font-weight: 500;
 }
 
 .card p {
   font-size: 1em;
-  color: #63310C;
+  color: var(--brown);
   margin-bottom: 15px;
 }
 
 .card button {
-  background-color: #63310C;
+  background-color:var(--brown);
   color: white;
   border: none;
   border-radius: 4px;
@@ -137,19 +125,18 @@ main {
   transition: background-color 0.3s ease;
 }
 
-
-.errorPage{
-  color: #63310C;
+.errorPage {
+  color: var(--brown);
   font-size: x-large;
 }
 
 .card button:hover {
-  background-color: #63310C;
+  background-color:var(--brown);
 }
 
 footer {
   border-radius: 6px;
-  background-color: #4C7797;
+  background-color: #4c7797;
   color: white;
   text-align: center;
   padding: 15px;
@@ -166,14 +153,13 @@ footer {
   border-radius: 8px;
 }
 
-.link{
+.link {
   background-color: rgb(125, 241, 125);
-  color: #63310C;
+  color: var(--brown);
   border: 2px solid #3a3535;
   border-radius: 10px;
-  text-decoration:none
+  text-decoration: none;
 }
-
 
 form {
   display: flex;
@@ -191,8 +177,7 @@ label {
 }
 input[type="text"],
 input[type="email"],
-input[type='password']
- {
+input[type="password"] {
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -201,8 +186,8 @@ input[type='password']
 }
 button {
   padding: 12px 20px;
-  background-color: #FBBD1B;
-  color: #F2F2DF;
+  background-color:var(--myColor);
+  color: #f2f2df;
   border: none;
   border-radius: 5px;
   font-size: 1em;
@@ -211,13 +196,13 @@ button {
   transition: background-color 0.3s ease, transform 0.1s ease;
 }
 button:hover {
-  background-color: #4B593E;
+  background-color: #4b593e;
 }
 button:active {
   transform: scale(0.98);
 }
 
-.image-card{
+.image-card {
   max-width: 100%;
   height: auto;
   border-radius: 12px;

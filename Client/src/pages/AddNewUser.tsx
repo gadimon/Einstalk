@@ -1,6 +1,6 @@
 import React from 'react'
 import PageHeader from './PageHeader'
-import NewUser from '../components/NewUser'
+import NewUser from '../components/newUser/NewUser'
 
 export default function AddNewUser() {
   return (

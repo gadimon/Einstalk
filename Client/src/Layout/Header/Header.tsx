@@ -4,9 +4,11 @@ import { useContext } from "react";
 import { UserConntext } from "../../Provider/UserProvider";
 import useFatch from "../../Hooks/useFetch";
 
+const env = await import.meta.env;
+const version = (env.VITE_PORT);
 
 const Header = () => {
-  const { getFatch} = useFatch<any>('http://localhost:3040/auth/logout')
+  const { getFatch} = useFatch<any>(`http://localhost:${version}/auth/logout`)
   const userContext = useContext(UserConntext)
   const navigate = useNavigate()
   return (

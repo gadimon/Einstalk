@@ -10,7 +10,7 @@ const LoginComp = () => {
     const [password, setPassword] = useState<string>('')
     const [login, setLogin] = useState<boolean>(false)
     const [showPassword, setShowPassword] = useState<boolean>(false);
-    const { postFetch} = useFatch<UserProps[]>('http://localhost:3040/auth/login')
+    const { postFetch} = useFatch<UserProps[]>('http://localhost:8080/auth/login')
     const isAuth = useContext<BooleanProps>(isKeyPressContext)
     const userConntext = useContext<UserProps | null>(UserConntext)
     
@@ -20,7 +20,6 @@ const LoginComp = () => {
             try{
               const res = await postFetch({username,password})
               userConntext?.setUser(res.userMan)
-              console.log(userConntext?.user);
               
             }catch (error) {
                 console.error("Login failed:", error);
