@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
-import { IComment, IPuzzels, IUser } from "../Interface/Interfaces";
-import { PuzzelContext } from "../Provider/PuzzelsProvider";
-import useFatch from "../Hooks/useFetch";
+import { IComment, IPuzzels, IUser } from "../../Interface/Interfaces";
+import { PuzzelContext } from "../../Provider/PuzzelsProvider";
+import useFatch from "../../Hooks/useFetch";
 import { Link, NavLink } from "react-router-dom";
 const env = import.meta.env;
 const version = env.VITE_PORT;

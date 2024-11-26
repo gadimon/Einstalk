@@ -1,6 +1,6 @@
 import React from 'react'
 import PageHeader from '../PageHeader'
-import AddPuzzleComp from '../../components/AddPuzzleComp'
+import AddPuzzleComp from '../../components/addPuzzle/AddPuzzleComp'
 
 export default function AddNewPuzzle() {
   return (
