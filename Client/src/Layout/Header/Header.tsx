@@ -3,7 +3,7 @@ import ProfileComp from "./profile-heder/ProfileComp";
 import { useContext } from "react";
 import { UserConntext } from "../../Provider/UserProvider";
 import useFatch from "../../Hooks/useFetch";
-
+import styles from './header.module.css';
 const env = await import.meta.env;
 const version = (env.VITE_PORT);
 
@@ -13,7 +13,7 @@ const Header = () => {
   const navigate = useNavigate()
   return (
     <>
-      <header>
+      <header className={styles.header}>
         <h1>Puzzles app</h1>
         {userContext?.user && <ProfileComp/>}
         <div className="login_register">

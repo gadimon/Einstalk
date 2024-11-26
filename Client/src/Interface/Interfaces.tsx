@@ -3,6 +3,7 @@ export interface IUser {
   username: string;
   password: string;
   image: string;
+  isAdmin: boolean;
 }
 
 export interface IComment {

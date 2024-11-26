@@ -1,4 +1,4 @@
-
+import styles from './main.module.css'
 interface Props {
   children: React.ReactNode
 }
@@ -6,7 +6,7 @@ interface Props {
 const Main = ({children}:Props) => {
   return (
     <>
-      <main>
+      <main className={styles.main}>
         {children}
 
         

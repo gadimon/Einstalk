@@ -6,16 +6,26 @@ import { UserConntext } from "../Provider/UserProvider";
 
 interface PrivateRouteProps {
   children: React.ReactNode;
+  adminOnly?: boolean;
 }
 
 
-const PrivateRoute: React.FC<PrivateRouteProps> = ({ children }) => {
+const PrivateRoute: React.FC<PrivateRouteProps> = ({ children, adminOnly}) => {
   const authContext = useContext(UserConntext);
   if (!authContext) {
     throw new Error("authContext is not provider");
   }
   const { user } = authContext;
-  return user ? children : <Navigate to="/login" />;
+
+  if (!user) {
+    return <Navigate to="/login" />;
+  }
+
+  if (adminOnly && !user.isAdmin) {
+    return <Navigate to="/unauthorized" />;
+  }
+
+  return <>{children}</>;
 };
 
 export default PrivateRoute;
