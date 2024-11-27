@@ -7,3 +7,9 @@
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     font-family: 'Poppins', sans-serif;
   }
+
+  button{
+    padding: "10px";
+    background: "#db9f70";
+    color: "black";
+  }
