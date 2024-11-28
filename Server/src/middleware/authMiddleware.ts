@@ -6,7 +6,7 @@ export interface authRequest extends Request{
     user?: mongoose.Types.ObjectId
 }
 interface JwtPayload {
-    _id: string; // מזהה המשתמש
+    _id: string; 
   }
   
 export const authMiddleware = (req:authRequest,res:Response,next:NextFunction): void =>{

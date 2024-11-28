@@ -27,6 +27,6 @@ mongoose
     console.error(`Error connecting to MongoDB:, ${error}`);
   });
 
-app.listen(process.env.PORT || 3050, () => {
-  console.log(`Listening on: http://localhost:${process.env.PORT || 3050}`);
+app.listen(process.env.VITE_PORT || 3050, () => {
+  console.log(`Listening on: http://localhost:${process.env.VITE_PORT || 3050}`);
 });

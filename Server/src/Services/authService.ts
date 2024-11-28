@@ -29,16 +29,18 @@ const registerUser = async ({
   }
 };
 
-
 const loginUser = async (username: string, password: string) => {
   try {
-    const foundUser = await User.findOne({ username });
+    const foundUser = await User.findOne({ username });    
     if (!foundUser) throw new Error("User not found");
-    const isPasswordCorrect = await bcrypt.compare(password ,foundUser.password);
+    const isPasswordCorrect = await bcrypt.compare(
+      password,
+      foundUser.password
+    );
 
     if (!isPasswordCorrect) throw new Error("Incorrect password or email");
-
     return foundUser;
+
   } catch (error) {
     throw new Error("Failed to login");
   }

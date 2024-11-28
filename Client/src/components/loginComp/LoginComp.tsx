@@ -17,7 +17,7 @@ const LoginComp = () => {
   const userConntext = useContext<UserProps | null>(UserConntext);
 
   const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault(); // Prevent page reload
+    event.preventDefault(); 
     if (login) {
       try {
         const res = await postFetch({ username, password });
@@ -65,11 +65,12 @@ const LoginComp = () => {
                 onClick={() => setLogin(true)}
               >
                 Login
+                <Link to="/"></Link>
               </button>
               <button
                 type="button"
                 className={Stiles.button}
-                onClick={() => isAuth.setIsPress(true)}
+                onClick={() => isAuth.setIsPress(true) }      
               >
                 close
               </button>

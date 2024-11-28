@@ -18,7 +18,7 @@ export default function DisplayPuzzles({ puzzles }: Props) {
       window.removeEventListener("resize", handleResizeWindow);
     };
   }, []);
-  if (width < breakpoint) {
+  if (width < breakpoint && puzzles && puzzles.length > 0) {
    return <DisplayOnePuzzle puzzles={puzzles}/>
   }
   return (
